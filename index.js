@@ -25,12 +25,15 @@ const playgame = (userChoice) => {
     if(comp==userChoice){
         console.log("It's a tie!")
         document.querySelector("#btn").innerText="Round is Tie!🤝 "
-        
-    }else if((comp=="rock" && userChoice=="scissor") || (comp=="scissor" && userChoice=="paper") || (comp=="paper" && userChoice=="rock")){
+        document.querySelector("#btn").style.backgroundColor = "yellow";
+    }
+
+    else if((comp=="rock" && userChoice=="scissor") || (comp=="scissor" && userChoice=="paper") || (comp=="paper" && userChoice=="rock")){
         console.log("Computer is Winner!")
         compScore++;
         document.querySelector("#comp-score").innerText=compScore
         document.querySelector("#btn").innerText="Computer Wins!🤖"
+        document.querySelector("#btn").style.backgroundColor="red"
 
 
     }
@@ -40,6 +43,7 @@ const playgame = (userChoice) => {
         userScore++;
         document.querySelector("#user-score").innerText=userScore
  document.querySelector("#btn").innerText="You Wins!🎉"
+ document.querySelector("#btn").style.backgroundColor="green"
     
 
 };}
